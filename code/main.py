@@ -12,7 +12,7 @@ WordEmbeddings_Model = True
 # -----------------------------------------------------------------------------
 
 Dataset_Root = '../data'
-Path_To_Dataset = os.path.join(Dataset_Root, 'chatgpt_paraphrases.csv')
+Path_To_Dataset = os.path.join(Dataset_Root, 'chatgpt_paraphrases_modified.csv')
 Figures_Root = '../figures'
 Online_plot = os.path.join(Figures_Root, 'Online_plot.png')
 Ngrams_plot = os.path.join(Figures_Root, 'Ngrams_plot.png')
