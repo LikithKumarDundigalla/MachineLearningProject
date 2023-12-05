@@ -4,9 +4,14 @@ import online_approach
 import Ngrams_approach
 import WordEmbeddings_approach
 
+
+# -----------------------------------------------------------------------------
+# Control exercise execution
+# -----------------------------------------------------------------------------
 Online_Approach_Model = False
 Ngrams_approach_Model = False
-WordEmbeddings_Model = True
+WordEmbeddings_Model = False
+
 # -----------------------------------------------------------------------------
 # Paths
 # -----------------------------------------------------------------------------
@@ -52,8 +57,11 @@ def models_accuracy(df, figure_path, model):
         print(WordEmbeddings_accuracy)
 
 
-if __name__ == '__main__':
+# -----------------------------------------------------------------------------
+# Script initialization
+# -----------------------------------------------------------------------------
 
+if __name__ == '__main__':
     if Online_Approach_Model:
         dataset = extract_data(Dataset_path=Path_To_Dataset, model="Online")
         models_accuracy(dataset, figure_path=Online_plot, model="Online")
