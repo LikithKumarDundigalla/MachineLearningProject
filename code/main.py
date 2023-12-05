@@ -4,7 +4,6 @@ import online_approach
 import Ngrams_approach
 import WordEmbeddings_approach
 
-
 # -----------------------------------------------------------------------------
 # Control exercise execution
 # -----------------------------------------------------------------------------
@@ -23,24 +22,35 @@ Online_plot = os.path.join(Figures_Root, 'Online_plot.png')
 Ngrams_plot = os.path.join(Figures_Root, 'Ngrams_plot.png')
 WordEmbeddings_plot = os.path.join(Figures_Root, 'WordEmbeddings_plot.png')
 
-# -----------------------------------------------------------------------------
-#Exisiting Project
-
-#This project has been already implemented and the link for the project is below.
-#https://www.analyticsvidhya.com/blog/2023/04/how-to-build-a-machine-learning-model-to-distinguish-if-its-human-or-chatgpt/
-# -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
-#Present Implementation
+# Exisiting Project
 
-#Used Chatgpt and other websited to understand the ways to extract features and what NLP techniques can be used here
-#https://chat.openai.com/share/1954395d-66ba-4d60-8bb7-68aec664fe23
-#https://www.datacamp.com/blog/what-is-tokenization
-#https://www.analyticsvidhya.com/blog/2021/09/what-are-n-grams-and-how-to-implement-them-in-python/#:~:text=N%2Dgrams%20are%20continuous%20sequences,(Natural%20Language%20Processing)%20tasks.
+# This project has been already implemented and the link for the project is below.
+# https://www.analyticsvidhya.com/blog/2023/04/how-to-build-a-machine-learning-model-to-distinguish-if-its-human-or-chatgpt/
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# Present Implementation
+
+# Used Chatgpt and other websited to understand the ways to extract features and what NLP techniques can be used here
+# https://chat.openai.com/share/1954395d-66ba-4d60-8bb7-68aec664fe23
+# https://www.datacamp.com/blog/what-is-tokenization
+# https://www.analyticsvidhya.com/blog/2021/09/what-are-n-grams-and-how-to-implement-them-in-python/#:~:text=N%2Dgrams%20are%20continuous%20sequences,(Natural%20Language%20Processing)%20tasks.
 # -----------------------------------------------------------------------------
 
 
-def extract_data(Dataset_path, model):
+def extract_data(Dataset_path: str, model: str) -> pd.DataFrame:
+    """
+    Load and preprocess the dataset.
+
+    Args:
+    - Dataset_path (str): Path to the dataset.
+    - model (str): Type of model ('Online', 'Ngrams', 'WordEmbedding').
+
+    Returns:
+    - pd.DataFrame: Processed dataset.
+    """
     df = pd.read_csv(Dataset_path)
     if model == "Online":
         df = df.sample(n=4000)
@@ -50,7 +60,16 @@ def extract_data(Dataset_path, model):
     return Dataset
 
 
-def transformations(data):
+def transformations(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Perform data transformations.
+
+    Args:
+    - data (pd.DataFrame): Input data.
+
+    Returns:
+    - pd.DataFrame: Transformed data.
+    """
     category = {}
     for i in range(len(data)):
         chatgpt = data.iloc[i]["paraphrases"][1:-1].split(', ')
@@ -62,10 +81,21 @@ def transformations(data):
     return df
 
 
-def models_accuracy(df, figure_path, model):
+def models_accuracy(df: pd.DataFrame, figure_path: str, model: str) -> None:
+    """
+    Calculate model accuracy.
+
+    Args:
+    - df (pd.DataFrame): Input dataset.
+    - figure_path (str): Path to save figures.
+    - model (str): Type of model ('Online', 'Ngrams', 'WordEmbedding').
+
+    Returns:
+    - None
+    """
     if model == "Online":
-        online_approach_accuracy = online_approach.online(df, figure_path)
-        print(online_approach_accuracy)
+        online_approach_accuracy, online_model_accuracy = online_approach.online(df, figure_path)
+        print(online_approach_accuracy, online_model_accuracy)
     elif model == "Ngrams":
         N_gram_accuracy = Ngrams_approach.Ngrams_approach(df, figure_path)
         print(N_gram_accuracy)

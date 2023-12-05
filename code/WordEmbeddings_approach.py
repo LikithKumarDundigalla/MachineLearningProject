@@ -9,7 +9,16 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 
-def data_transformations(df):
+def data_transformations(df: pd.DataFrame) -> tuple:
+    """
+    Perform data transformations on the DataFrame.
+
+    Args:
+    - df (pd.DataFrame): Input DataFrame containing 'text' and 'category' columns.
+
+    Returns:
+    - tuple: A tuple containing 'all_data' (concatenated text data) and 'labels' (associated labels).
+    """
     df.dropna(inplace=True)
     text_data = df[df['text'].apply(lambda x: isinstance(x, str))]
     human_data = text_data[text_data['category'] == 'human']['text']
@@ -19,7 +28,17 @@ def data_transformations(df):
     return all_data, labels
 
 
-def get_sentence_vector(model, sentence):
+def get_sentence_vector(model: Word2Vec, sentence: str) -> np.ndarray:
+    """
+    Get the vector representation of a sentence using a Word2Vec model.
+
+    Args:
+    - model (Word2Vec): Word2Vec model.
+    - sentence (str): Input sentence.
+
+    Returns:
+    - np.ndarray: Vector representation of the sentence.
+    """
     word_vectors = [model.wv[word] for word in sentence.split() if word in model.wv]
     if len(word_vectors) > 0:
         return np.mean(word_vectors, axis=0)
@@ -27,7 +46,17 @@ def get_sentence_vector(model, sentence):
         return np.zeros(model.vector_size)
 
 
-def ML_model(sentence_vectors, labels):
+def ML_model(sentence_vectors: list, labels: list) -> tuple:
+    """
+    Train a Logistic Regression model and evaluate its performance.
+
+    Args:
+    - sentence_vectors (list): List of sentence vectors.
+    - labels (list): Associated labels.
+
+    Returns:
+    - tuple: A tuple containing accuracy percentage, true labels, and predicted labels.
+    """
     X_train, X_test, y_train, y_test = train_test_split(sentence_vectors, labels, test_size=0.2, random_state=42)
     classifier = LogisticRegression(max_iter=1000)
     classifier.fit(X_train, y_train)
@@ -37,7 +66,15 @@ def ML_model(sentence_vectors, labels):
     return accuracy, y_test, y_pred
 
 
-def plot(y_test, y_pred, figure_path):
+def plot(y_test: list, y_pred: list, figure_path: str) -> None:
+    """
+    Plot the confusion matrix.
+
+    Args:
+    - y_test (list): True labels.
+    - y_pred (list): Predicted labels.
+    - figure_path (str): Path to save the figure.
+    """
     conf_matrix = confusion_matrix(y_test, y_pred)
     # Plotting the confusion matrix
     plt.figure(figsize=(6, 6))
@@ -50,7 +87,17 @@ def plot(y_test, y_pred, figure_path):
     plt.savefig(figure_path)
 
 
-def word_embedding(df, figure_path):
+def word_embedding(df: pd.DataFrame, figure_path: str) -> float:
+    """
+    Perform word embedding and evaluate accuracy.
+
+    Args:
+    - df (pd.DataFrame): Input DataFrame containing 'text' and 'category' columns.
+    - figure_path (str): Path to save the figure.
+
+    Returns:
+    - float: Accuracy percentage.
+    """
     print("In Word Embedding")
     all_data, labels = data_transformations(df)
     print("Word Embedding Transformation Done")
