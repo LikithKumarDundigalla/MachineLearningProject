@@ -1,0 +1,10 @@
+matplotlib==3.7.2
+numpy~=1.23.5
+pytest==7.4.0
+scipy==1.11.2
+scikit-learn~=1.2.2
+genism==3.8
+nltk~=3.8.1
+seaborn~=0.12.2
+pandas~=1.5.3
+gensim~=4.3.0
