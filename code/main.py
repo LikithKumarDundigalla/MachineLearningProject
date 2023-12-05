@@ -23,6 +23,23 @@ Online_plot = os.path.join(Figures_Root, 'Online_plot.png')
 Ngrams_plot = os.path.join(Figures_Root, 'Ngrams_plot.png')
 WordEmbeddings_plot = os.path.join(Figures_Root, 'WordEmbeddings_plot.png')
 
+# -----------------------------------------------------------------------------
+#Exisiting Project
+
+#This project has been already implemented and the link for the project is below.
+#https://www.analyticsvidhya.com/blog/2023/04/how-to-build-a-machine-learning-model-to-distinguish-if-its-human-or-chatgpt/
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+#Present Implementation
+
+#Used Chatgpt and other websited to understand the ways to extract features and what NLP techniques can be used here
+#https://chat.openai.com/share/1954395d-66ba-4d60-8bb7-68aec664fe23
+#https://www.datacamp.com/blog/what-is-tokenization
+#https://www.analyticsvidhya.com/blog/2021/09/what-are-n-grams-and-how-to-implement-them-in-python/#:~:text=N%2Dgrams%20are%20continuous%20sequences,(Natural%20Language%20Processing)%20tasks.
+# -----------------------------------------------------------------------------
+
+
 def extract_data(Dataset_path, model):
     df = pd.read_csv(Dataset_path)
     if model == "Online":
