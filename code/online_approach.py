@@ -1,3 +1,10 @@
+"""
+Module for text classification using various classifiers and visualizing performance.
+
+This module contains functions for feature extraction, model training, prediction, evaluation using
+multiple classifiers such as Logistic Regression, SVC, Multinomial Naive Bayes, Decision Tree,
+K-Nearest Neighbors, Random Forest, Extra Trees, AdaBoost, Bagging, and Gradient Boosting.
+"""
 import pandas as pd
 from pandas import DataFrame
 from sklearn import metrics

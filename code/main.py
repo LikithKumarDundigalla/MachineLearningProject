@@ -1,3 +1,10 @@
+"""
+Module for evaluating different text classification approaches.
+
+This module orchestrates the comparison of three text classification approaches: Online Approach, Ngrams Approach,
+and Word Embeddings Approach. It includes functions to load, preprocess, transform data, and calculate model accuracy.
+"""
+
 import pandas as pd
 import os
 import online_approach

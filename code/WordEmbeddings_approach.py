@@ -1,3 +1,10 @@
+"""
+Module for text classification using Word Embedding with Logistic Regression.
+
+This module includes functions for data transformations, Word2Vec word embedding,
+Logistic Regression model training, accuracy evaluation, and confusion matrix plotting.
+"""
+
 import numpy as np
 import pandas as pd
 import seaborn as sns
