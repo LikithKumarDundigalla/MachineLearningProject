@@ -22,7 +22,7 @@ The `WordEmbeddings_approach.py` file utilizes Word Embeddings through the Gensi
 
 ## Code Structure
 The codebase is organized as follows:
-
+-`main.py` : Initiation function, starts executing the whole project. 
 - `online_approach.py`: Contains the code for the online approach.
 - `Ngrams_approach.py`: Implements the N-grams based approach.
 - `WordEmbeddings_approach.py`: Code for the Word Embeddings approach.
@@ -37,6 +37,7 @@ To use this repository:
 4. Run the main script: `python main.py`
 
 ## File Descriptions
+- `dataset.py` : Extracts data from "Hugging Face" and saves as a csv file.
 - `main.py`: Entry point for orchestrating different approaches. 
 - `online_approach.py`: Implements the online approach using existing methodologies.
 - `Ngrams_approach.py`: Contains code for the N-grams based approach.
