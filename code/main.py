@@ -52,8 +52,8 @@ def extract_data(Dataset_path: str, model: str) -> pd.DataFrame:
     Load and preprocess the dataset.
 
     Args:
-    - Dataset_path (str): Path to the dataset.
-    - model (str): Type of model ('Online', 'Ngrams', 'WordEmbedding').
+    - Dataset_path : Path to the dataset.
+    - model : Type of model ('Online', 'Ngrams', 'WordEmbedding').
 
     Returns:
     - pd.DataFrame: Processed dataset.
@@ -72,7 +72,7 @@ def transformations(data: pd.DataFrame) -> pd.DataFrame:
     Perform data transformations.
 
     Args:
-    - data (pd.DataFrame): Input data.
+    - data : Input data.
 
     Returns:
     - pd.DataFrame: Transformed data.
@@ -93,9 +93,9 @@ def models_accuracy(df: pd.DataFrame, figure_path: str, model: str) -> None:
     Calculate model accuracy.
 
     Args:
-    - df (pd.DataFrame): Input dataset.
-    - figure_path (str): Path to save figures.
-    - model (str): Type of model ('Online', 'Ngrams', 'WordEmbedding').
+    - df : Input dataset.
+    - figure_path : Path to save figures.
+    - model : Type of model ('Online', 'Ngrams', 'WordEmbedding').
 
     Returns:
     - None

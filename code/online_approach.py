@@ -30,12 +30,12 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-def features(df: pd.DataFrame) -> tuple:
+def features(df: pd.DataFrame) -> tuple[pd.Series,pd.Series]:
     """
     Extracts features and labels from the given DataFrame.
 
     Args:
-    - df (pd.DataFrame): DataFrame containing 'text' and 'category' columns.
+    - df : DataFrame containing 'text' and 'category' columns.
 
     Returns:
     - tuple: A tuple containing features (X) and labels (y).

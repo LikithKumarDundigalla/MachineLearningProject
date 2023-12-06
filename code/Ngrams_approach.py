@@ -23,7 +23,7 @@ def data_transformations(df: pd.DataFrame) -> tuple:
     Transform the data to extract text and category labels.
 
     Args:
-    - df (pd.DataFrame): DataFrame containing 'text' and 'category' columns.
+    - df : DataFrame containing 'text' and 'category' columns.
 
     Returns:
     - tuple: A tuple containing processed text data and corresponding labels.
@@ -44,7 +44,7 @@ def token_data(all_data: pd.Series) -> list:
     Tokenize the text data.
 
     Args:
-    - all_data (pd.Series): Series containing text data.
+    - all_data : Series containing text data.
 
     Returns:
     - list: List of tokenized sentences.
@@ -60,7 +60,7 @@ def ngram_vectorizer(tokenized_data: list) -> 'scipy.sparse.csr_matrix':
     Vectorize the tokenized data into N-gram features.
 
     Args:
-    - tokenized_data (list): List of tokenized sentences.
+    - tokenized_data : List of tokenized sentences.
 
     Returns:
     - scipy.sparse.csr_matrix: N-gram features.
@@ -75,8 +75,8 @@ def model(ngram_features: 'scipy.sparse.csr_matrix', labels: list) -> tuple:
     Build and evaluate the classification model using Multinomial Naive Bayes.
 
     Args:
-    - ngram_features ('scipy.sparse.csr_matrix'): N-gram features.
-    - labels (list): List of labels.
+    - ngram_features : N-gram features.
+    - labels : List of labels.
 
     Returns:
     - tuple: Accuracy, classification report, true labels, and predicted labels.
@@ -100,9 +100,9 @@ def plot_graph(y_test: list, predictions: list, figure_path: str) -> None:
     Plot and save the confusion matrix.
 
     Args:
-    - y_test (list): True labels.
-    - predictions (list): Predicted labels.
-    - figure_path (str): Path to save the figure.
+    - y_test : True labels.
+    - predictions : Predicted labels.
+    - figure_path : Path to save the figure.
     """
     conf_matrix = confusion_matrix(y_test, predictions)
 
@@ -121,8 +121,8 @@ def Ngrams_approach(df: pd.DataFrame, figure_path: str) -> float:
     Execute the N-grams approach for text classification.
 
     Args:
-    - df (pd.DataFrame): DataFrame containing 'text' and 'category' columns.
-    - figure_path (str): Path to save the plotted confusion matrix figure.
+    - df : DataFrame containing 'text' and 'category' columns.
+    - figure_path : Path to save the plotted confusion matrix figure.
 
     Returns:
     - float: Accuracy of the model.

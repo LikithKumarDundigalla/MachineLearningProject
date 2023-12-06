@@ -21,7 +21,7 @@ def data_transformations(df: pd.DataFrame) -> tuple:
     Perform data transformations on the DataFrame.
 
     Args:
-    - df (pd.DataFrame): Input DataFrame containing 'text' and 'category' columns.
+    - df : Input DataFrame containing 'text' and 'category' columns.
 
     Returns:
     - tuple: A tuple containing 'all_data' (concatenated text data) and 'labels' (associated labels).
@@ -40,8 +40,8 @@ def get_sentence_vector(model: Word2Vec, sentence: str) -> np.ndarray:
     Get the vector representation of a sentence using a Word2Vec model.
 
     Args:
-    - model (Word2Vec): Word2Vec model.
-    - sentence (str): Input sentence.
+    - model : Word2Vec model.
+    - sentence : Input sentence.
 
     Returns:
     - np.ndarray: Vector representation of the sentence.
@@ -58,8 +58,8 @@ def ML_model(sentence_vectors: list, labels: list) -> tuple:
     Train a Logistic Regression model and evaluate its performance.
 
     Args:
-    - sentence_vectors (list): List of sentence vectors.
-    - labels (list): Associated labels.
+    - sentence_vectors : List of sentence vectors.
+    - labels : Associated labels.
 
     Returns:
     - tuple: A tuple containing accuracy percentage, true labels, and predicted labels.
@@ -78,9 +78,9 @@ def plot(y_test: list, y_pred: list, figure_path: str) -> None:
     Plot the confusion matrix.
 
     Args:
-    - y_test (list): True labels.
-    - y_pred (list): Predicted labels.
-    - figure_path (str): Path to save the figure.
+    - y_test : True labels.
+    - y_pred : Predicted labels.
+    - figure_path : Path to save the figure.
     """
     conf_matrix = confusion_matrix(y_test, y_pred)
     # Plotting the confusion matrix
@@ -99,8 +99,8 @@ def word_embedding(df: pd.DataFrame, figure_path: str) -> float:
     Perform word embedding and evaluate accuracy.
 
     Args:
-    - df (pd.DataFrame): Input DataFrame containing 'text' and 'category' columns.
-    - figure_path (str): Path to save the figure.
+    - df : Input DataFrame containing 'text' and 'category' columns.
+    - figure_path : Path to save the figure.
 
     Returns:
     - float: Accuracy percentage.
