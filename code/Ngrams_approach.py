@@ -108,8 +108,8 @@ def plot_graph(y_test: list, predictions: list, figure_path: str) -> None:
 
     # Plotting the confusion matrix
     plt.figure(figsize=(8, 6))
-    sns.heatmap(conf_matrix, annot=True, cmap='Blues', fmt='d', xticklabels=['human', 'AI'],
-                yticklabels=['human', 'AI'])
+    sns.heatmap(conf_matrix, annot=True, cmap='Blues', fmt='d', xticklabels=['Human', 'ChatGPT'],
+                yticklabels=['Human', 'ChatGPT'])
     plt.xlabel('Predicted')
     plt.ylabel('True')
     plt.title('Confusion Matrix')
