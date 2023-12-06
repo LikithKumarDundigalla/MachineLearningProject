@@ -3,7 +3,12 @@ Module for text classification using various classifiers and visualizing perform
 
 This module contains functions for feature extraction, model training, prediction, evaluation using
 multiple classifiers such as Logistic Regression, SVC, Multinomial Naive Bayes, Decision Tree,
-K-Nearest Neighbors, Random Forest, Extra Trees, AdaBoost, Bagging, and Gradient Boosting.
+K-Nearest Neighbors, Random Forest, Extra Trees, AdaBoost, Bagging, and Gradient Boosting, accuracies for all these
+models are considered.
+
+The model with the highest accuracy and f1_score among these classifiers is selected, and the chosen model for training
+and future prediction is the 'ExtraTreesClassifier'. The module utilizes this classifier to train the model using the
+fit method.
 """
 import pandas as pd
 from pandas import DataFrame
@@ -173,4 +178,4 @@ def online(df, figure_path):
     cm, accuracy_score = etc_model(etc_classifier, X_train_tfidf, X_test_tfidf, y_train, y_test, X_test)
     plot(cm, figure_path)
     print("Existing method plot done")
-    return accuracy, accuracy_score
+    return accuracy, f1_score, accuracy_score

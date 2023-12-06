@@ -14,7 +14,7 @@ import WordEmbeddings_approach
 # -----------------------------------------------------------------------------
 # Control exercise execution
 # -----------------------------------------------------------------------------
-Online_Approach_Model = False
+Online_Approach_Model = True
 Ngrams_approach_Model = False
 WordEmbeddings_Model = False
 
@@ -101,8 +101,10 @@ def models_accuracy(df: pd.DataFrame, figure_path: str, model: str) -> None:
     - None
     """
     if model == "Online":
-        online_approach_accuracy, online_model_accuracy = online_approach.online(df, figure_path)
-        print(online_approach_accuracy, online_model_accuracy)
+        online_approach_accuracy, f1_score, online_model_accuracy = online_approach.online(df, figure_path)
+        print(online_approach_accuracy)
+        print(f1_score)
+        print(online_model_accuracy)
     elif model == "Ngrams":
         N_gram_accuracy = Ngrams_approach.Ngrams_approach(df, figure_path)
         print(N_gram_accuracy)
