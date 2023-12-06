@@ -60,7 +60,7 @@ def extract_data(Dataset_path: str, model: str) -> pd.DataFrame:
     """
     df = pd.read_csv(Dataset_path)
     if model == "Online":
-        df = df.sample(n=4000)
+        df = df.sample(n=20000)
     else:
         df = df.sample(n=100000)
     Dataset = transformations(df)
