@@ -15,8 +15,8 @@ import WordEmbeddings_approach
 # Control exercise execution
 # -----------------------------------------------------------------------------
 Online_Approach_Model = True
-Ngrams_approach_Model = False
-WordEmbeddings_Model = False
+Ngrams_approach_Model = True
+WordEmbeddings_Model = True
 
 # -----------------------------------------------------------------------------
 # Paths
@@ -60,9 +60,9 @@ def extract_data(Dataset_path: str, model: str) -> pd.DataFrame:
     """
     df = pd.read_csv(Dataset_path)
     if model == "Online":
-        df = df.sample(n=20000)
+        df = df.sample(n=5000)
     else:
-        df = df.sample(n=100000)
+        df = df.sample(n=125000)
     Dataset = transformations(df)
     return Dataset
 
