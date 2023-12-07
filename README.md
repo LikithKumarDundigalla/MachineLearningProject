@@ -11,7 +11,7 @@ This repository contains code for a machine learning model that distinguishes be
 ## Approach Overview
 There are three main approaches used in this project:
 
-### Online Approach
+### TF-IDF Approach
 The code for the online approach is provided in the `online_approach.py` file. This approach leverages existing models and methodologies showcased in [Analytics Vidhya's article](https://www.analyticsvidhya.com/blog/2023/04/how-to-build-a-machine-learning-model-to-distinguish-if-its-human-or-chatgpt/).
 
 ### Ngrams Approach
@@ -39,7 +39,7 @@ To use this repository:
 ## File Descriptions
 - `dataset.py` : Extracts data from "Hugging Face" and saves as a csv file.
 - `main.py`: Entry point for orchestrating different approaches. 
-- `online_approach.py`: Implements the online approach using existing methodologies.
+- `online_approach.py`: Implements the TF-IDF approach using existing methodologies.
 - `Ngrams_approach.py`: Contains code for the N-grams based approach.
 - `WordEmbeddings_approach.py`: Code for the Word Embeddings approach.
 - `requirements.txt`: Lists required libraries and versions.
