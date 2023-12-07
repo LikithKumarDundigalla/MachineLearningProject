@@ -12,7 +12,7 @@ This repository contains code for a machine learning model that distinguishes be
 There are three main approaches used in this project:
 
 ### TF-IDF Approach
-The code for the online approach is provided in the `online_approach.py` file. This approach leverages existing models and methodologies showcased in [Analytics Vidhya's article](https://www.analyticsvidhya.com/blog/2023/04/how-to-build-a-machine-learning-model-to-distinguish-if-its-human-or-chatgpt/).
+The code for the Tf-IDF approach is provided in the `online_approach.py` file. This approach leverages existing models and methodologies showcased in [Analytics Vidhya's article](https://www.analyticsvidhya.com/blog/2023/04/how-to-build-a-machine-learning-model-to-distinguish-if-its-human-or-chatgpt/).
 
 ### Ngrams Approach
 The `Ngrams_approach.py` file implements an approach based on N-grams for feature extraction and classification. It uses [CountVectorizer](https://www.datacamp.com/blog/what-is-tokenization) to generate N-gram features and employs Multinomial Naive Bayes for classification.
@@ -23,7 +23,7 @@ The `WordEmbeddings_approach.py` file utilizes Word Embeddings through the Gensi
 ## Code Structure
 The codebase is organized as follows:
 -`main.py` : Initiation function, starts executing the whole project. 
-- `online_approach.py`: Contains the code for the online approach.
+- `online_approach.py`: Code for the TF-IDF approach.
 - `Ngrams_approach.py`: Implements the N-grams based approach.
 - `WordEmbeddings_approach.py`: Code for the Word Embeddings approach.
 - `requirements.txt`: Lists the necessary libraries and their versions required to run the code.
