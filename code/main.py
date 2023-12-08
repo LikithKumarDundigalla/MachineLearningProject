@@ -42,9 +42,9 @@ WordEmbeddings_plot = os.path.join(Figures_Root, 'WordEmbeddings_plot.png')
 
 # Used Chatgpt and other websited to understand the ways to extract features and what NLP techniques can be used here
 # https://chat.openai.com/share/1954395d-66ba-4d60-8bb7-68aec664fe23
-#https://chat.openai.com/share/46d12112-3991-4539-9a17-e405f5c2ffff
-# https://www.datacamp.com/blog/what-is-tokenization
 # https://www.analyticsvidhya.com/blog/2021/09/what-are-n-grams-and-how-to-implement-them-in-python/#:~:text=N%2Dgrams%20are%20continuous%20sequences,(Natural%20Language%20Processing)%20tasks.
+# https://www.tensorflow.org/text/tutorials/word2vec
+# https://www.kaggle.com/code/kstathou/word-embeddings-logistic-regression
 # -----------------------------------------------------------------------------
 
 
