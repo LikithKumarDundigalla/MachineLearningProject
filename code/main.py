@@ -14,9 +14,9 @@ import WordEmbeddings_approach
 # -----------------------------------------------------------------------------
 # Control exercise execution
 # -----------------------------------------------------------------------------
-Online_Approach_Model = True
-Ngrams_approach_Model = True
-WordEmbeddings_Model = True
+Online_Approach_Model = False
+Ngrams_approach_Model = False
+WordEmbeddings_Model = False
 
 # -----------------------------------------------------------------------------
 # Paths
