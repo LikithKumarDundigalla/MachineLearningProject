@@ -52,7 +52,8 @@ Student name: Likith Kumar Dundigalla
 - It looks like used an existing project as a starting point and added
   components from other projects. It seems like you did a substantial amount of
   work on your own, so I am ok with it. However, it is still not acceptable to
-  lift large chunks of code or text from other projects. So I am going to give you
-  0/10 in the introduction section and 0/5 on the 'code' section.
+  lift large chunks of code or text from other projects. But since you cited
+  your sources clearly, I will not give you a zero on the whole project. But I
+  will give you 0/10 in the introduction section and 0/5 on the 'code' section.
 
 Total: 87/100
