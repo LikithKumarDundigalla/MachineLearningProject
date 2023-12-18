@@ -34,7 +34,7 @@ Student name: Likith Kumar Dundigalla
 
 ## Reproducibility
 
-- Is the code submitted? (0/5)
+- Is the code submitted? (5/5)
   - Large chunks of code overlap with existing project.
 - Is the code well-documented? (5/5)
 - Are there instructions on how to use the code and data to reproduce your
@@ -54,6 +54,6 @@ Student name: Likith Kumar Dundigalla
   work on your own, so I am ok with it. However, it is still not acceptable to
   lift large chunks of code or text from other projects. But since you cited
   your sources clearly, I will not give you a zero on the whole project. But I
-  will give you 0/10 in the introduction section and 0/5 on the 'code' section.
+  will give you 0/10 in the introduction section.
 
-Total: 87/100
+Total: 92/100
